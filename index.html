@@ -13,12 +13,15 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#home" class="logo">Portfolio</a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -30,7 +33,6 @@
       </nav>
     </header>
 
-    <!-- Home Section -->
     <section class="home" id="home">
       <div class="home-content">
         <h3>Hello, It's Me</h3>
@@ -70,7 +72,7 @@
         <div class="btn-group">
           <a href="#about" class="btn-box">More About Me</a>
           <a
-            href="https://drive.google.com/file/d/12jDbxOsSYysYU4QUCD2zWWvpFjx2zz1L/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1MDmzboh3vnAeVm0Rk4uRIZx8kJkXvBmn/view?usp=sharing"
             target="_blank"
             class="btn-box btn-secondary"
           >
@@ -84,15 +86,7 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
-      <style>
-        @media (max-width: 768px) {
-          .about .about-img {
-            display: none !important;
-          }
-        }
-      </style>
       <div class="about-img">
         <img src="images/About.png" alt="Akshat Gupta" />
       </div>
@@ -102,17 +96,15 @@
           Hello, I'm Akshat Gupta, from Saharanpur. Currently, I am a Third-year
           BTech student specializing in data science at Galgotias University.
           Alongside my academic pursuits, I am actively engaged in backend
-          development. With a strong foundation in Python, Java, and C
-          languages, as well as Data Structures and Algorithms (DSA), I have
+          development. With a strong foundation in Python, Java, and MERN, as well as Data Structures and Algorithms (DSA), I have
           been applying my skills to real-world projects. My ambition is to
-          build a career as a data scientist, and I am also passionate about
+          build a career as a Backend developer, and I am also passionate about
           problem-solving.
         </p>
         <a href="#contact" class="btn-box">Contact Me</a>
       </div>
     </section>
 
-    <!-- Journey Section -->
     <section class="journey" id="journey">
       <h1 class="sub-title">My <span>Journey</span></h1>
 
@@ -171,7 +163,6 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="services" id="skills">
       <div class="container">
         <h1 class="sub-title">My <span>Skills</span></h1>
@@ -244,7 +235,6 @@
       </div>
     </section>
 
-    <!-- Proficiencies Section -->
     <section class="proficiencies" id="proficiencies">
       <h1 class="sub-title">My <span>Proficiencies</span></h1>
 
@@ -347,194 +337,217 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="portfolio" id="projects">
       <div class="main-text">
         <h2>Latest <span>Projects</span></h2>
+        <p class="swipe-hint">Swipe to see more</p>
+      </div>
 
-        <div class="portfolio-content">
-          <div class="row">
-            <img
-              src="https://placehold.co/600x400/1a2b3c/0ef?text=Weather+App"
-              alt="Weather App Project"
-            />
-            <div class="layer">
-              <h5>Weather App</h5>
-              <p>
-                A real-time weather app utilizing APIs to fetch and display
-                current conditions and forecasts for any city.
-              </p>
-              <a
-                href="https://github.com/AK-GUPTA-20"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="bx bx-link-external"></i>
-              </a>
+      <div class="swiper myProjectSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/1a2b3c/0ef?text=Voting+System"
+                alt="Voting System Project"
+              />
+              <div class="layer">
+                <h5>Voting System using Python</h5>
+                <p>
+                  A secure voting app with Aadhar-based authentication to ensure
+                  integrity and enable one-time voting. Includes an admin panel
+                  for candidate management and a dashboard for live vote counting.
+                </p>
+                <a
+                  href="https://github.com/AK-GUPTA-20/Simple-Python-Projects/blob/main/Online%20Voating%20System/Online%20voting%20System%20through%20python%20using%20oops.py"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="row">
-            <img
-              src="https://placehold.co/600x400/1a2b3c/0ef?text=To-Do+List"
-              alt="To-Do List Project"
-            />
-            <div class="layer">
-              <h5>To-Do List</h5>
-              <p>
-                A dynamic To-Do list built with HTML, CSS, and JavaScript,
-                allowing users to add, edit, and delete tasks.
-              </p>
-              <a
-                href="https://github.com/AK-GUPTA-20"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="bx bx-link-external"></i>
-              </a>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/1a2b3c/0ef?text=Smart+Traffic+Management"
+                alt="Smart Traffic Management Project"
+              />
+              <div class="layer">
+                <h5>Smart Traffic Management System</h5>
+                <p>
+                  Engineered a real-time system prioritizing emergency vehicles
+                  to optimize traffic flow and reduce response times. Integrated
+                  scheduling algorithms (FCFS, Round Robin, Priority) for
+                  dynamic signal control.
+                </p>
+                <a
+                  href="https://github.com/AK-GUPTA-20/SmartTrafficSystem-repo.git"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="row">
-            <img
-              src="https://placehold.co/600x400/1a2b3c/0ef?text=MERN+Form"
-              alt="MERN Enquiry Form Project"
-            />
-            <div class="layer">
-              <h5>MERN Enquiry Form</h5>
-              <p>
-                A full-stack MERN application to handle user enquiries with
-                database integration.
-              </p>
-              <a
-                href="https://github.com/AK-GUPTA-20"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="bx bx-link-external"></i>
-              </a>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/1a2b3c/0ef?text=E-commerce+Project"
+                alt="E-commerce Project"
+              />
+              <div class="layer">
+                <h5>Green Cart Ecommerce</h5>
+                <p>
+                  GreenCart is a fast and easy vegetable delivery app designed
+                  to help small vendors and dairymen reach customers quickly. It
+                  brings fresh produce to users' homes with ultra-fast delivery
+                  and complete convenience.
+                </p>
+                <a
+                  href="https://github.com/AK-GUPTA-20/GreenCart.git"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img
+                src="https://placehold.co/600x400/1a2b3c/0ef?text=MERN+Form"
+                alt="MERN Enquiry Form Project"
+              />
+              <div class="layer">
+                <h5>MERN Form</h5>
+                <p>
+                  Developed an Enquiry Form Management System using the MERN
+                  stack, where users can create, delete, edit and see their queries
+                  in real time.
+                </p>
+                <a
+                  href="https://github.com/AK-GUPTA-20"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-  <section class="contact" id="contact">
-  <div class="contact-text">
-    <h2>Contact <span>Me</span></h2>
-    <h4>Let's Work Together</h4>
-    <p>Have an idea or a project? Let's connect and make it happen!</p>
-    <div class="contact-list">
-      <li>
-        <i class="bx bxs-send"></i>
-        <a href="mailto:guptaakshat7795@gmail.com"
-          >guptaakshat7795@gmail.com</a
+    <section class="contact" id="contact">
+      <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's Work Together</h4>
+        <p>Have an idea or a project? Let's connect and make it happen!</p>
+        <div class="contact-list">
+          <li>
+            <i class="bx bxs-send"></i>
+            <a href="mailto:guptaakshat7795@gmail.com"
+              >guptaakshat7795@gmail.com</a
+            >
+          </li>
+          <li>
+            <i class="bx bx-phone"></i>
+            <a href="tel:+919027278481">+91 9027278481</a>
+          </li>
+        </div>
+        <div class="contact-icons">
+          <a
+            href="https://www.instagram.com/itz_akshatgupta"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="https://wa.me/9027278481" target="_blank" rel="noopener">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/akshat-gupta-243460280"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/AK-GUPTA-20"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form
+          action="https://formsubmit.co/guptaakshat7795@gmail.com"
+          method="POST"
         >
-      </li>
-      <li>
-        <i class="bx bx-phone"></i>
-        <a href="tel:+919027278481">+91 9027278481</a>
-      </li>
-    </div>
-    <div class="contact-icons">
-      <a
-        href="https://www.instagram.com/itz_akshatgupta"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="bx bxl-instagram"></i>
-      </a>
-      <a href="https://wa.me/9027278481" target="_blank" rel="noopener">
-        <i class="bx bxl-whatsapp"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/akshat-gupta-243460280"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="bx bxl-linkedin"></i>
-      </a>
-      <a
-        href="https://github.com/AK-GUPTA-20"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="bx bxl-github"></i>
-      </a>
-    </div>
-  </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
+          <input
+            type="text"
+            name="_subject"
+            placeholder="Enter Your Subject"
+            required
+          />
+          <textarea
+            name="message"
+            cols="40"
+            rows="10"
+            placeholder="Enter Your Message"
+            required
+          ></textarea>
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://akshat-gupta-portfolio.netlify.app/thankyou.html"
+          />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thank you for contacting Akshat Gupta! I'll get back to you soon."
+          />
+          <input type="hidden" name="_template" value="table" />
+          <input type="submit" value="Submit" class="send" />
+        </form>
+      </div>
+    </section>
 
-  <div class="contact-form">
-    <form
-      action="https://formsubmit.co/guptaakshat7795@gmail.com"
-      method="POST"
-    >
-      <!-- Name -->
-      <input
-        type="text"
-        name="name"
-        placeholder="Enter Your Name"
-        required
-      />
-
-      <!-- Email -->
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter Your Email"
-        required
-      />
-
-      <!-- Subject -->
-      <input 
-        type="text" 
-        name="_subject" 
-        placeholder="Enter Your Subject"
-        required
-      />
-
-      <!-- Message -->
-      <textarea
-        name="message"
-        cols="40"
-        rows="10"
-        placeholder="Enter Your Message"
-        required
-      ></textarea>
-
-      <!-- FormSubmit Configuration -->
-      <!-- Disable Captcha -->
-      <input type="hidden" name="_captcha" value="false" />
-
-      <!-- Redirect after submission -->
-      <input
-        type="hidden"
-        name="_next"
-        value="http://akshat-gupta-portfolio.netlify.app/thankyou.html"
-      />
-
-      <!-- Auto-response to user (optional) -->
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting Akshat Gupta! I'll get back to you soon." />
-
-      <!-- Email template format -->
-      <input type="hidden" name="_template" value="table" />
-
-      <input type="submit" value="Submit" class="send" />
-    </form>
-  </div>
-</section>
-
-    <!-- Footer -->
     <div class="last-text">
       <p>Developed By Akshat Gupta</p>
     </div>
 
-    <!-- Scroll to Top -->
     <a href="#home" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

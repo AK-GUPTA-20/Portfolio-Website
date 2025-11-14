@@ -1,11 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Thanks!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Akshat Gupta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #081b29 0%, #112e42 100%);
+      color: #ededed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated background circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 238, 255, 0.1);
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: -150px;
+      left: -150px;
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      bottom: -100px;
+      right: -100px;
+      animation-delay: 3s;
+    }
+
+    .circle:nth-child(3) {
+      width: 150px;
+      height: 150px;
+      top: 50%;
+      left: 80%;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(17, 46, 66, 0.8);
+      padding: 50px 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 238, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(0, 238, 255, 0.2);
+      max-width: 550px;
+      width: 90%;
+      position: relative;
+      z-index: 10;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, #0ef, #00c6ff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2s infinite;
+    }
+
+    .success-icon i {
+      font-size: 45px;
+      color: #081b29;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(0, 238, 255, 0.8);
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #0ef;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      color: #ededed;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      color: #0ef;
+      font-weight: 600;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 26px;
+      background: #0ef;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #081b29;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(0, 238, 255, 0.8);
+      background: #00c6ff;
+    }
+
+    .btn i {
+      font-size: 1.2rem;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #0ef;
+      color: #0ef;
+    }
+
+    .btn-secondary:hover {
+      background: #0ef;
+      color: #081b29;
+    }
+
+    .social-links {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(0, 238, 255, 0.2);
+    }
+
+    .social-links p {
+      color: #aaa;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      background: transparent;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      color: #0ef;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #0ef;
+      color: #081b29;
+      transform: scale(1.1) rotate(360deg);
+      box-shadow: 0 0 20px rgba(0, 238, 255, 0.8);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1rem;
+      }
+
+      .btn-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .success-icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .success-icon i {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
-<body style="text-align: center; color:white; margin-top:20%; background:#081b29;">
-  <h1>Thank you for contacting us 😊</h1>
-  <p>Your message has been delivered successfully.</p>
-  <a href="index.html" style="color:#0ef;">Go back</a>
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <div class="success-icon">
+      <i class='bx bx-check'></i>
+    </div>
+
+    <h1>Thank You! 🎉</h1>
+    
+    <div class="message">
+      <p>Your message has been <span class="highlight">successfully delivered</span>!</p>
+      <p style="margin-top: 15px;">
+        I appreciate you reaching out. I'll review your message and get back to you as soon as possible, usually within <span class="highlight">24-48 hours</span>.
+      </p>
+    </div>
+
+    <div class="btn-group">
+      <a href="index.html" class="btn">
+        <i class='bx bx-home'></i>
+        Back to Home
+      </a>
+      <a href="index.html#projects" class="btn btn-secondary">
+        <i class='bx bx-code-alt'></i>
+        View Projects
+      </a>
+    </div>
+
+    <div class="social-links">
+      <p>Or connect with me on social media</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/itz_akshatgupta" target="_blank" rel="noopener" title="Instagram">
+          <i class='bx bxl-instagram'></i>
+        </a>
+        <a href="https://wa.me/9027278481" target="_blank" rel="noopener" title="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/akshat-gupta-243460280" target="_blank" rel="noopener" title="LinkedIn">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/AK-GUPTA-20" target="_blank" rel="noopener" title="GitHub">
+          <i class='bx bxl-github'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const socialIcons = document.querySelectorAll('.social-icons a');
+      socialIcons.forEach((icon, index) => {
+        setTimeout(() => {
+          icon.style.animation = `slideIn 0.5s ease-out forwards`;
+        }, 800 + (index * 100));  // 800ms initial delay, then 100ms between each icon
+      });
+    });
+  </script>
 </body>
 </html>

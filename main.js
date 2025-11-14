@@ -1,13 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Skipper UI
-  if (typeof Skipper !== 'undefined') {
-    Skipper.init({
-      threshold: 0.1,
-      duration: 1000,
-      easing: 'ease-out',
-      once: false // Animations trigger every time elements come into view
-    });
-  }
+  
+  // Initialize Swiper for Project Cards with smoother loop
+  var swiper = new Swiper(".myProjectSwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+    loopAdditionalSlides: 2,
+    speed: 600,
+    cardsEffect: {
+      perSlideOffset: 8,
+      perSlideRotate: 2,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+  });
 
   // Hamburger Menu Toggle
   const menuIcon = document.querySelector("#menu-icon");
@@ -90,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.classList.remove("active");
   });
 
-  // ScrollReveal Animations (Kept for additional effects)
+  // ScrollReveal Animations
   ScrollReveal({
     distance: "80px",
     duration: 2000,
@@ -102,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   ScrollReveal().reveal(
-    ".home-img, .services-list, .portfolio-content, .contact-form, .journey-column:nth-child(2)",
+    ".home-img, .services-list, .contact-form, .journey-column:nth-child(2)",
     {
       origin: "bottom",
     }
@@ -116,25 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   ScrollReveal().reveal(
-    ".home-scl, .btn-group, .contact-text, .professional-container, .about-img",
+    ".home-scl, .btn-group, .contact-text, .professional-container",
     {
       origin: "right",
     }
   );
-
-  // Add smooth parallax effect to project cards
-  const projectCards = document.querySelectorAll('.portfolio-content .row');
-  
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-10px) scale(1.02)';
-      this.style.transition = 'all 0.3s ease';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0) scale(1)';
-    });
-  });
 
   // Add hover effect to skill cards
   const skillCards = document.querySelectorAll('.services-list div');
